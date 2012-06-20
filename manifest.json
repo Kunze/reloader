@@ -1,0 +1,13 @@
+{
+"name": "Reloader",
+"description": "Reload groups os tabs",
+"version": "1.0",
+"icons": {
+	"48": "reloader.jpg"
+},
+"browser_action": {
+    "default_icon": "reloader.jpg",
+    "default_popup": "popup.html"
+},
+"permissions":["tabs","<all_urls>"]
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	ul{
+		list-style : none;
+		padding:0px 0px;
+	}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/knockout-2.1.0.js"></script>
+	<script type="text/javascript" src="js/reloader.js"></script>
+</head>
+<body>
+	<input type="text" data-bind="value: name" placeholder="Name"/><br>
+	<input type="text" data-bind="value: pattern" placeholder="Pattern"/>
+
+	<button data-bind="click: add">Add</button>
+
+	<ul data-bind="foreach: items">
+		<li>
+			<span data-bind="text: pattern"></span>
+		</li>
+		<li>
+			<button data-bind="click: $parent.reload">Reload</button>
+			<button data-bind="click: $parent.remove">Remove</button>
+		</li>
+	</ul>
+	
+	<script type="text/javascript" src="js/viewmodel.js"></script>
+</body>
+</html>
