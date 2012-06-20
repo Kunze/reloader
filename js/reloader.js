@@ -2,7 +2,7 @@ var reloader = {
 	reload:function(pattern)
 	{
 		chrome.tabs.getAllInWindow(null, function(tabs){
-			$.each(tabs,function(index,tab){
+			tabs.forEach(function(tab){
 				if (tab.url.indexOf(pattern) > -1)
 					chrome.tabs.reload(tab.id);
 			});
